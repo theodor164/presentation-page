@@ -6,7 +6,6 @@
 }
 
 .project {
-  margin: 20px;
   width: 47%;
   height: 450px
 }
@@ -25,6 +24,21 @@
 @media screen and (max-width: 1347px)
 {
   .project {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 950px)
+{
+  .project {
     width: 75%;
+  }
+}
+
+@media screen and (max-width: 457px)
+{
+  .project {
+    width: 95%;
+    height: 300px;
   }
 }

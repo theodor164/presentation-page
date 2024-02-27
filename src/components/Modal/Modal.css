@@ -13,7 +13,7 @@
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 20px auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
@@ -36,6 +36,10 @@
 .modal img {
   transition: none; /* Disable transition for images inside the modal */
   cursor: default;
+  max-width: 100%; /* Ensure the image does not exceed the modal width */
+  max-height: 80vh; /* Ensure the image does not exceed the modal height */
+  display: block; /* Ensure the image behaves as a block element */
+  margin: auto; /* Center the image horizontally */
 }
 
 .modal img:hover {
