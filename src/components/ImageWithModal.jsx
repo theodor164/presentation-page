@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 import Modal from './Modal/Modal'; // Assuming you have a Modal component
 
-const ImageWithModal = ({ imageUrl, projectTitle, projectLink }) => {
+const ImageWithModal = ({ images, imageUrl }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleImageClick = () => {
+  const handleImageClick = (index) => {
+    setCurrentIndex(index);
     setIsOpen(true);
   };
 
@@ -15,8 +17,8 @@ const ImageWithModal = ({ imageUrl, projectTitle, projectLink }) => {
 
   return (
     <>
-      <img src={imageUrl} alt='projectImage' onClick={handleImageClick} />
-      {isOpen && <Modal imageUrl={imageUrl} projectTitle={projectTitle} projectLink={projectLink} closeModal={closeModal} />}
+      <img src={imageUrl} alt='projectImage' onClick={() => handleImageClick(images.findIndex(image => image.imageUrl === imageUrl))} />
+      {isOpen && <Modal images={images} currentIndex={currentIndex} closeModal={closeModal} />}
     </>
   );
 };

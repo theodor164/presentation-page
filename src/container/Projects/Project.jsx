@@ -3,10 +3,10 @@ import React from 'react';
 import ImageWithModal from '../../components/ImageWithModal';
 import './Projects.css'
 
-const Project = ({ imageUrl, projectTitle, projectLink }) => {
+const Project = ({ images, imageUrl }) => {
   return (
     <div className="project">
-      <ImageWithModal imageUrl={imageUrl} projectTitle={projectTitle} projectLink={projectLink}/>
+      <ImageWithModal images={images} imageUrl={imageUrl} />
     </div>
   );
 };

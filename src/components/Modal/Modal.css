@@ -36,12 +36,37 @@
 .modal img {
   transition: none; /* Disable transition for images inside the modal */
   cursor: default;
-  max-width: 100%; /* Ensure the image does not exceed the modal width */
-  max-height: 80vh; /* Ensure the image does not exceed the modal height */
+  width: 750px; /* Ensure the image does not exceed the modal width */
+  height: 450px; /* Ensure the image does not exceed the modal height */
   display: block; /* Ensure the image behaves as a block element */
   margin: auto; /* Center the image horizontally */
+  flex-grow: 5;
 }
 
 .modal img:hover {
   transform: none; /* Reset transform for images inside the modal */
+}
+
+.modal-content-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 978px)
+{
+  .modal img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px)
+{
+  .modal img {
+    height: 200px;
+  }
 }

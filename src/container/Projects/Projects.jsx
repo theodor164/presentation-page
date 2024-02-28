@@ -17,10 +17,10 @@ const Projects = () => {
 
   return (
     <div>
-      <h1>Projects</h1>
+      <h1 style={{ color: "white" }}>Projects</h1>
       <div className="projects">
         {images.map((image, index) => (
-          <Project key={index} imageUrl={image.imageUrl} projectTitle={image.projectTitle} projectLink={image.projectLink}/>
+          <Project key={index} images={images} imageUrl={image.imageUrl}/>
         ))}
       </div>
     </div>
