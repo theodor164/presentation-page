@@ -1,3 +1,5 @@
+/* Navbar.css */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -16,12 +18,32 @@
   padding: 2px;
 }
 
-@media screen and (max-width: 630px)
-{
-  .navbar {
-    justify-content: center;
-  }
-  .navbar-item {
-    font-size: 50px;
-  }
+.team-info {
+  display: none; /* Hide team members by default */
+  background-color: #88a6df;
+}
+
+.show-team .team-info {
+  display: flex; /* Show team members when class is present */
+  flex-direction: column; /* Stack team members vertically */
+  align-items: center; /* Center horizontally */
+  width: 100%; /* Full width */
+  margin-top: 20px; /* Add margin at the top */
+}
+
+.member {
+  margin: 10px;
+}
+
+.member img {
+  width: 200px;
+  height: 200px;
+}
+
+.member p {
+  margin: 5px 0;
+}
+
+.member a {
+  color: blue;
 }
