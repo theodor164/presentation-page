@@ -52,12 +52,12 @@ function Navbar() {
         <div className="team-info" onMouseLeave={handleLeave}>
           <div className="member">
             <img src={image1} alt="Team Member 1" />
-            <p>John Doe</p>
+            <p>Andrei Tudorache</p>
             <a href="linkedin.com/johndoe">LinkedIn</a>
           </div>
           <div className="member">
             <img src={image2} alt="Team Member 2" />
-            <p>Jane Smith</p>
+            <p>Theodor Tanase</p>
             <a href="linkedin.com/janesmith">LinkedIn</a>
           </div>
         </div>
