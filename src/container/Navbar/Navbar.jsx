@@ -42,14 +42,14 @@ function Navbar() {
 
   return (
     <div className={`navbar ${showTeamMembers ? 'show-team' : ''}`} >
-      <div className="team navbar-item" onMouseEnter={handleHover} onMouseLeave={handleLeave} onClick={handleClick}>
+      <div className="team navbar-item" onMouseEnter={handleHover} onClick={handleClick}>
         TEAM
       </div>
       <div className="inquiry navbar-item">
         INQUIRY
       </div>     
       {showTeamMembers && (
-        <div className="team-info">
+        <div className="team-info" onMouseLeave={handleLeave}>
           <div className="member">
             <img src={image1} alt="Team Member 1" />
             <p>John Doe</p>
